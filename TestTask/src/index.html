@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap w/ Webpack</title>
+  </head>
+  <body>
+    <div class="mw-100 min-vh-100 position-relative">
+      <nav id="navbar-example2" class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand mb-0 fw-bold h1" href="#">Бренд</a>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Меню</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body fw-bold">
+              <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Главная</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#scrollspyHeading1">Каталог</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Цены</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="d-flex">
+            <button class="btn btn-primary fw-semibold rounded-top-right-pill rounded-bottom-left-pill d-flex align-items-center" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill mx-1" viewBox="0 0 16 16">
+                <path
+                  fill-rule="evenodd"
+                  d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
+                />
+              </svg>
+              <span class="d-none d-lg-block">Заказать звонок</span>
+            </button>
+            <button
+              class="navbar-toggler rounded-top-right-pill rounded-bottom-left-pill"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </div>
+      </nav>
+      <div class="bg-black h-100 w-100 position-absolute top-0 start-0">
+        <video src="https://gitrequests.github.io/interview-bootstrap/assets/video.mp4" type="video/mp4" class="object-fit-cover opacity-50 w-100 h-100" autoplay loop muted></video>
+        <div class="w-75 h-50 d-flex flex-column justify-content-between position-absolute top-50 start-50 translate-middle">
+          <div class="w-100">
+            <p class="text-white text-center fs-1 mb-0 text-sm-start">Купить <span class="text-danger">товар</span> с доставкой</p>
+            <p class="text-white text-center fs-3 fw-medium text-sm-start">Официальный поставщик <span class="text-danger">товаров</span> в Cтране!</p>
+          </div>
+          <div class="w-100 d-flex justify-content-center justify-content-sm-between flex-wrap">
+            <button class="btn btn-custom-color rounded-top-right-pill rounded-bottom-left-pill fw-bold px-5 mb-3 mb-sm-0" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Заказать звонок
+            </button>
+            <p class="text-white text-center fs-6 mb-0 text-sm-start">Ваши данные <br />под надежной защитой</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      data-bs-spy="scroll"
+      data-bs-target="#navbar-example2"
+      data-bs-root-margin="0px 0px -40%"
+      data-bs-smooth-scroll="true"
+      class="scrollspy-example bg-dark mb-5 py-3 d-flex justify-content-center"
+      tabindex="0"
+    >
+      <h2 class="text-white mx-auto mb-0">Каталог</h2>
+    </div>
+    <div id="scrollspyHeading1" class="row row-cols-1 row-cols-md-3 g-4 mb-5 w-75 mx-auto">
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://gitrequests.github.io/interview-bootstrap/assets/image.webp" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Товар 1</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <ul>
+              <li>An item</li>
+              <li>A second item</li>
+              <li>A third item</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <a class="btn btn-primary rounded-top-right-pill rounded-bottom-left-pill w-100 stretched-link">Купить</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://gitrequests.github.io/interview-bootstrap/assets/image.webp" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Товар 2</h5>
+          </div>
+          <div class="card-footer">
+            <a class="btn btn-primary rounded-top-right-pill rounded-top-left-1 rounded-bottom-left-pill w-100 stretched-link">Купить</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">...</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-custom-color rounded-top-right-pill rounded-bottom-left-pill px-4" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary rounded-top-right-pill rounded-bottom-left-pill px-4">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
